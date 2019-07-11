@@ -1,17 +1,87 @@
-body {
+body,
+html {
     height: 100%;
     background-color: black;
-    color: white
+    color: white;
+    margin: 0;
+    font-family: 'Barlow', sans-serif;
+    font-size: 1em;
 }
 
 #content {
-    height: 45%;
+    height: 100%;
+    width: 100%;
+    text-align: center;
 }
 
-#menu {
-    height: 10%
+#oponent,
+#player {
+    height: 45%;
+    width: 100%;
+    font-size: 9em;
+}
+
+#oponent {
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+    filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+    color: #F44336
 }
 
 #player {
-    height: 45%;
+    color: #FFEB3B;
+    position: absolute;
+}
+
+#menu {
+    height: 10%;
+    width: 100%;
+}
+
+.counter,
+.tools {
+    margin: 0;
+    position: relative;
+    top: 50%;
+    left: 50%;
+}
+
+.counter {
+    transform: translate(-50%, -50%) scaleY(1.5);
+}
+
+.tools {
+    transform: translate(-50%, -50%) scaleY(1);
+}
+
+i.material-icons {
+    vertical-align: middle;
+    margin: 0px 1em
+}
+
+.timer {
+    transform: scaleY(1.3);
+}
+
+.float-top,
+.float-bot {
+    width: 100%;
+    background-color: transparent;
+    position: absolute;
+}
+
+.float-top{
+    background-color: transparent;
+    top:10%;
+    height: 40%;
+    box-sizing: border-box;
+    z-index: 5;
+}
+.float-bot {
+    height: 50%;
+    background-color: transparent;
+    top: 50%;
+    box-sizing: border-box
 }

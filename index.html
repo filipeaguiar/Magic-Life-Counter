@@ -1,19 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt_BR">
-<head>
-    <link rel="manifest" href="manifest.json">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Magic Life Counter</title>
+    <head>
+        <link rel="manifest" href="manifest.json">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Magic Life Counter</title>
+
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link
+            href="https://fonts.googleapis.com/css?family=Barlow:500&display=swap"
+            rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet">
+    </head>
+    <body>
+        <div id="content">
+            <div id="oponent">
+                <div class="float-top" v-on:click="upOponent"></div>
+                <p class="counter">{{oponentTotal}}</p>
+                <div class="float-bot" v-on:click="downOponent"></div>
+
+            </div>
+            <div id="menu">
+                <span>
+                    <i class="material-icons">casino</i>
+                </span>
+                <span id="timer">
+                    00:00:00
+                </span>
+                <span>
+                    <i class="material-icons">refresh</i>
+                </span>
+            </div>
+            <div id="player">
+                <div class="float-top" v-on:click="upPlayer"></div>
+                <p class="counter">{{playerTotal}}</p>
+                <div class="float-bot" v-on:click="downPlayer"></div>
+            </div>
+        </div>
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script>-->
     <script src="app.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-    <div id="content">
-        <div id="oponent">20</div>
-        <div id="menu">Reset - Dice - Timer</div>
-        <div id="player">20</div>
-    </div>
-</body>
 </html>
