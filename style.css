@@ -1,27 +1,37 @@
 body,
 html {
-    height: 100%;
-    background-color: black;
-    color: white;
-    margin: 0;
     font-family: 'Barlow', sans-serif;
-    font-size: 1em;
 }
-
+/* 
 #content {
     height: 100%;
     width: 100%;
     text-align: center;
 }
 
-#oponent,
-#player {
-    height: 45%;
+#lifeCounter {
+    height: 100%;
     width: 100%;
-    font-size: 9em;
+    text-align: center;
 }
 
-#oponent {
+#diceRoll {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+} */
+
+#oponent,
+#player,
+#oponentDice,
+#playerDice {
+    height: 45vh;
+    font-size: 9em;
+    font-weight: bold
+}
+
+#oponent,
+#oponentDice {
     -webkit-transform: rotate(-180deg);
     -moz-transform: rotate(-180deg);
     -o-transform: rotate(-180deg);
@@ -30,15 +40,16 @@ html {
     color: #F44336
 }
 
-#player {
+#player,
+#playerDice {
     color: #FFEB3B;
-    position: absolute;
 }
 
-#menu {
-    height: 10%;
-    width: 100%;
+#menu,
+#menuDice {
+    height: 10vh;
 }
+/*
 
 .counter,
 .tools {
@@ -46,6 +57,7 @@ html {
     position: relative;
     top: 50%;
     left: 50%;
+    font-size: 2em
 }
 
 .counter {
@@ -64,24 +76,29 @@ i.material-icons {
 .timer {
     transform: scaleY(1.3);
 }
+*/
 
-.float-top,
-.float-bot {
+.minus {
+    position: absolute;
+    height: 50%;
+    top: 50%;
     width: 100%;
     background-color: transparent;
-    position: absolute;
-}
-
-.float-top{
-    background-color: transparent;
-    top:10%;
-    height: 40%;
-    box-sizing: border-box;
     z-index: 5;
 }
-.float-bot {
+
+.plus {
+    position: absolute;
+    top: 0;
     height: 50%;
-    background-color: transparent;
-    top: 50%;
-    box-sizing: border-box
+    width: 100%;
+    background-color: transparent;    
+}
+
+.minusP {
+    top:75% !important
+}
+
+.plusP {
+    top:55% !important
 }

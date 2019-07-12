@@ -14,34 +14,70 @@
         <link
             href="https://fonts.googleapis.com/icon?family=Material+Icons"
             rel="stylesheet">
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css"
+            integrity="sha256-vK3UTo/8wHbaUn+dTQD0X6dzidqc5l7gczvH+Bnowwk="
+            crossorigin="anonymous"/>
     </head>
-    <body>
-        <div id="content">
-            <div id="oponent">
-                <div class="float-top" v-on:click="upOponent"></div>
-                <p class="counter">{{oponentTotal}}</p>
-                <div class="float-bot" v-on:click="downOponent"></div>
-
+    <body class="has-background-black has-text-centered is-unselectable">
+        <div id="content" class="hero has-text-white is-fullheight is-fullwidth">
+            <div id="life" class="container" v-show="lifeCounter">
+                <div class="columns is-vcentered " id="oponent">
+                    <div class="column">
+                        <div class="plus" v-on:click="upOponent"></div>
+                        {{oponentTotal}}
+                        <div class="minus" v-on:click="downOponent"></div>
+                    </div>
+                </div>
+                <div class="columns is-mobile is-vcentered has-text-centered is-size-3" id="menu">
+                    <div class="column"  v-on:click="diceRoll(true)">
+                        <i class="material-icons">
+                            casino
+                        </i>
+                    </div>
+                    <div class="column is-vcentered">
+                        <span id="minutes">00</span>:<span id="seconds">00</span>
+                    </div>
+                    <div class="column" v-on:click="resetLife">
+                        <i class="material-icons">
+                            refresh
+                        </i>
+                    </div>
+                </div>
+                <div class="columns is-vcentered" id="player">
+                    <div class="column">
+                        <div class="plus plusP" v-on:click="upPlayer"></div>
+                            {{playerTotal}}
+                        <div class="minus minusP" v-on:click="downPlayer"></div>
+                    </div>
+                </div>
             </div>
-            <div id="menu">
-                <span>
-                    <i class="material-icons">casino</i>
-                </span>
-                <span id="timer">
-                    00:00:00
-                </span>
-                <span>
-                    <i class="material-icons">refresh</i>
-                </span>
-            </div>
-            <div id="player">
-                <div class="float-top" v-on:click="upPlayer"></div>
-                <p class="counter">{{playerTotal}}</p>
-                <div class="float-bot" v-on:click="downPlayer"></div>
+            <div id="dice" class="container" v-show="!lifeCounter">
+                <div class="colunms is-vcentered">
+                    <div class="column" id="oponentDice">
+                        {{oponentDice}}
+                    </div>
+                    <div class="columns is-mobile is-vcentered has-text-centered" id="menuDice">
+                        <div class="column" v-on:click="diceRoll(false)">
+                            <i class="material-icons">refresh</i>
+                        </div>
+                        <div class="column" v-on:click="diceRoll(true)">
+                            <i class="material-icons">arrow_back</i>
+                        </div>
+                    </div>
+                    <div class="column" id="playerDice">
+                        {{playerDice}}
+                    </div>
+                </div>
             </div>
         </div>
     </body>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script>-->
     <script src="app.js"></script>
+    <script src="easytimer.js"></script>
+    <!-- <script src="scripts.js"></script> -->
+    <script src="scripts.js">
+    </script>
 </html>

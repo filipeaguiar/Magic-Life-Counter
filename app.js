@@ -2,7 +2,10 @@ var app = new Vue({
     el: '#content',
     data: {
       oponentTotal: 20,
-      playerTotal: 20
+      playerTotal: 20,
+      lifeCounter: true,
+      oponentDice: 1,
+      playerDice: 6
     },
     methods: {
         upPlayer: function() {
@@ -24,48 +27,21 @@ var app = new Vue({
             console.log(this.oponentTotal)
             this.oponentTotal = parseInt(this.oponentTotal) - 1
             console.log(this.oponentTotal)
+        },
+        diceRoll: function (t) {
+            if(t) {
+                this.lifeCounter = !this.lifeCounter
+            }
+            this.oponentDice = Math.floor(Math.random() * (6 - 1)) + 1
+            this.playerDice = Math.floor(Math.random() * (6 - 1)) + 1
+            console.log(this.lifeCounter)
+        },
+        resetLife: function () {
+            this.playerTotal = 20
+            this.oponentTotal = 20
+            sec = 0
         }
     }
   })
 
-  var timer = document.getElementById('timer'),
-    start = document.getElementById('start'),
-    stop = document.getElementById('stop'),
-    clear = document.getElementById('clear'),
-    seconds = 0, minutes = 0, hours = 0,
-    t;
-
-function add() {
-    seconds++;
-    if (seconds >= 60) {
-        seconds = 0;
-        minutes++;
-        if (minutes >= 60) {
-            minutes = 0;
-            hours++;
-        }
-    }
-    
-    timertextContent = (hours ? (hours > 9 ? hours : "0" + hours) : "00") + ":" + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);
-
-    timer();
-}
-function timer() {
-    t = setTimeout(add, 1000);
-}
-timer();
-
-
-/* Start button */
-start.onclick = timer;
-
-/* Stop button */
-stop.onclick = function() {
-    clearTimeout(t);
-}
-
-/* Clear button */
-clear.onclick = function() {
-    timertextContent = "00:00:00";
-    seconds = 0; minutes = 0; hours = 0;
-}
+  
