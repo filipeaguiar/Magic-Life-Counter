@@ -2,6 +2,7 @@ body,
 html {
     font-family: 'Barlow', sans-serif;
     overscroll-behavior-y: none;
+    overflow: hidden
 }
 /* 
 #content {
