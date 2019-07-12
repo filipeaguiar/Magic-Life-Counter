@@ -20,9 +20,9 @@
             integrity="sha256-vK3UTo/8wHbaUn+dTQD0X6dzidqc5l7gczvH+Bnowwk="
             crossorigin="anonymous"/>
         <script type="text/javascript">
-            // This is the "Offline page" service worker Add this below content to your HTML
-            // page, or add the js file to your page at the very top to register service
-            // worker Check compatibility for the browser we're running this in
+            // This is the "Offline copy of pages" service worker Add this below content to
+            // your HTML page, or add the js file to your page at the very top to register
+            // service worker Check compatibility for the browser we're running this in
             if ("serviceWorker" in navigator) {
                 if (navigator.serviceWorker.controller) {
                     console.log("[PWA Builder] active service worker found, no need to register");
@@ -98,10 +98,9 @@
             Install
         </button>
     </body>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script>-->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="app.js"></script>
     <script src="easytimer.js"></script>
-    <!-- <script src="scripts.js"></script> -->
     <script src="scripts.js"></script>
 </html>
