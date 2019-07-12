@@ -1,6 +1,7 @@
 body,
 html {
     font-family: 'Barlow', sans-serif;
+    overscroll-behavior-y: none;
 }
 /* 
 #content {
@@ -101,4 +102,8 @@ i.material-icons {
 
 .plusP {
     top:55% !important
+}
+
+.hidden {
+    display: none
 }
