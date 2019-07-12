@@ -1,8 +1,9 @@
 body,
 html {
-    font-family: 'Barlow', sans-serif;
+    font-family: 'Teko', sans-serif !important;
     overscroll-behavior-y: none;
-    overflow: hidden
+    overflow: hidden;
+    background-color: #000000 !important;
 }
 /* 
 #content {
@@ -28,7 +29,7 @@ html {
 #oponentDice,
 #playerDice {
     height: 45vh;
-    font-size: 9em;
+    font-size: 14rem !important;
 }
 
 #oponent,
@@ -49,6 +50,7 @@ html {
 #menu,
 #menuDice {
     height: 10vh;
+    z-index: 10;
 }
 /*
 
