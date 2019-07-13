@@ -9,24 +9,16 @@ var app = new Vue({
     },
     methods: {
         upPlayer: function() {
-            console.log(this.playerTotal)
             this.playerTotal = parseInt(this.playerTotal) + 1
-            console.log(this.playerTotal)
         },
         downPlayer: function () {
-            console.log(this.playerTotal)
             this.playerTotal = parseInt(this.playerTotal) - 1
-            console.log(this.playerTotal)
         },
         upOponent: function() {
-            console.log(this.oponentTotal)
             this.oponentTotal = parseInt(this.oponentTotal) + 1
-            console.log(this.oponentTotal)
         },
         downOponent: function () {
-            console.log(this.oponentTotal)
             this.oponentTotal = parseInt(this.oponentTotal) - 1
-            console.log(this.oponentTotal)
         },
         diceRoll: function (t) {
             if(t) {
@@ -34,7 +26,6 @@ var app = new Vue({
             }
             this.oponentDice = Math.floor(Math.random() * (6 - 1)) + 1
             this.playerDice = Math.floor(Math.random() * (6 - 1)) + 1
-            console.log(this.lifeCounter)
         },
         resetLife: function () {
             this.playerTotal = 20
