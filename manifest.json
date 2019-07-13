@@ -3,7 +3,7 @@
   "short_name": "Magic Life Counter",
   "theme_color": "#000000",
   "background_color": "#000000",
-  "display": "minimal-ui",
+  "display": "fullscreen",
   "orientation": "portrait",
   "Scope": "/Magic-Life-Counter",
   "start_url": "index.html",
